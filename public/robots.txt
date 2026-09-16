@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-ai-detector.vercel.app/sitemap.xml
+Sitemap: https://ai-detection-lac.vercel.app/sitemap.xml
