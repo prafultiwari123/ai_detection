@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Source_Serif_4, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
+import Link from 'next/link';
 import './globals.css';
 
 const serif = Source_Serif_4({
@@ -58,6 +59,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${serif.variable} ${mono.variable}`}>
       <body>
+        {/* Site nav — appears on every page */}
+        <header className="max-w-3xl mx-auto px-6 py-6 flex items-center justify-between">
+          <Link href="/" className="font-serif text-lg font-semibold">
+            AI Line Detector
+          </Link>
+          <nav className="flex gap-6 text-sm">
+            <Link href="/blog">Blog</Link>
+            <Link href="/about">About</Link>
+          </nav>
+        </header>
+
         {children}
 
         {/* JSON-LD structured data */}
