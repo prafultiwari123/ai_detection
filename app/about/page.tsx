@@ -21,7 +21,7 @@ export default function AboutPage() {
       </p>
       {/* Replace with your real story/bio */}
       <p>
-        This project was built by [your name], focused on making AI
+        This project was built by Praful Tiwari, focused on making AI
         detection transparent and easy to use.
       </p>
     </main>
