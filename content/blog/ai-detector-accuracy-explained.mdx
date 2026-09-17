@@ -1,0 +1,41 @@
+---
+title: "How Accurate Are AI Detectors, Really?"
+description: "A clear-eyed look at what AI detection tools can and can't reliably tell you, and why context always matters."
+date: "2026-09-17"
+slug: "ai-detector-accuracy-explained"
+---
+
+AI detection tools promise a simple answer to a genuinely hard question: was this written by a human or a machine? The honest answer is that no detector gets this right 100% of the time, and understanding why helps you use these tools more effectively.
+
+## What Detectors Actually Measure
+
+Most AI detectors don't "know" a piece of text is AI-generated in any absolute sense. Instead, they measure statistical properties — how predictable each word choice is given the words before it (perplexity), and how much sentence complexity varies across a passage (burstiness). AI-generated text tends to score lower on both measures because language models favor statistically likely word choices and produce more uniform sentence structures. Human writing tends to be more unpredictable and variable — but not always.
+
+## Why False Positives Happen
+
+Some human writing naturally resembles AI output statistically:
+
+- **Formal, technical writing** (academic papers, legal documents, textbooks) tends to be more predictable and uniform by nature, which can trigger false positives.
+- **Non-native English speakers** often write with more careful, grammatically consistent structure, which can score similarly to AI text.
+- **Heavily edited human writing** — after multiple passes of polishing — sometimes loses the natural "burstiness" that signals human authorship.
+
+## Why False Negatives Happen
+
+On the other side, AI-generated text can evade detection when:
+
+- The user specifically prompts the model to "write more casually" or "vary sentence length," which pushes the output away from typical AI patterns
+- The text goes through paraphrasing or "humanizing" tools designed specifically to alter statistical properties
+- Newer model versions are trained to reduce the very patterns detectors are trained to catch — an ongoing cat-and-mouse dynamic between AI writing tools and AI detection tools
+
+## What "Percentage" Scores Actually Mean
+
+When a tool says a passage is "85% likely AI-generated," this is a confidence estimate based on the model's training data, not a measurement of literal fact. It means the statistical patterns in that text resemble AI-generated samples the detector was trained on with 85% confidence — not that 85% of the words were literally written by a machine.
+
+## How to Use Detection Tools Responsibly
+
+- Treat results as one signal among several, not a final verdict
+- Be more cautious with borderline scores (40-70% range) than with extreme scores
+- Consider the source and context — who wrote this, under what circumstances, and does a high AI score match other available evidence?
+- Re-run ambiguous results through more than one tool when the stakes are high
+
+AI detection is a genuinely useful but imperfect technology. Understanding its limitations helps you use it as one part of good judgment, rather than treating any single score as absolute truth.
