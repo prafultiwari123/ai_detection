@@ -10,14 +10,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   try {
-    const { meta } = getPostBySlug(params.slug);
+    const { meta } = getPostBySlug(slug);
     return {
       title: meta.title,
       description: meta.description,
-      alternates: { canonical: `/blog/${params.slug}` },
+      alternates: { canonical: `/blog/${slug}` },
       openGraph: {
         title: meta.title,
         description: meta.description,
@@ -29,10 +30,16 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   let post;
   try {
-    post = getPostBySlug(params.slug);
+    post = getPostBySlug(slug);
   } catch {
     notFound();
   }
